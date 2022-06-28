@@ -1,21 +1,22 @@
 *** Settings ***
-Library    Selenium2Library
+Resource    ../resource/import.robot
+Resource    ../elements/element_home_page.robot
 *** Keywords ***
 Open robotframework
-    Open Browser        https://robotframework.org/        chrome
-    Wait Until Element Is Visible    xpath://nav/li/a[@class="nav-link"]
-    Element Text Should Be           xpath://nav/li/a[@class="nav-link"]    INTRODUCTION
-    Click Element                    xpath://nav/li/a[@class="nav-link"]
+    Open Browser        ${robot_url}        chrome
+    Wait Until Element Is Visible    ${introduction}
+    Element Text Should Be           ${introduction}    INTRODUCTION
+    Click Element                    ${introduction}
     # Sleep   4s
 Check Example
-    Open Browser        https://robotframework.org/        chrome
-    Wait Until Element Is Visible        xpath://nav/li[2]/a[@href="#examples"]
-    Element Text Should Be               xpath://nav/li[2]/a[@href="#examples"]    EXAMPLES
-    Click Element                        xpath://nav/li[2]/a[@href="#examples"]
+    Open Browser        ${robot_url}        chrome
+    Wait Until Element Is Visible        ${home_example}
+    Element Text Should Be               ${home_example}    EXAMPLES
+    Click Element                        ${home_example}
     Sleep    4s
 
 Check Library
-    Open Browser        https://robotframework.org/        chrome
-    Wait Until Element Is Visible    xpath=//nav/li[3]/a
-    Click Element        xpath=//nav/li[3]/a    
+    Open Browser        ${robot_url}        chrome
+    Wait Until Element Is Visible    ${home_library}
+    Click Element        ${home_library}
     Sleep    4s

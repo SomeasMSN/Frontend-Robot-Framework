@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1rc1 (Python 3.9.5 on darwin)" generated="20211012 19:50:46.972" rpa="false" schemaversion="2">
+<suite id="s1" name="Automationbystep" source="/Users/nightman/Desktop/Frontend-Robot-Framework/teseCases/automationbystep.robot">
+<test id="s1-t1" name="Automation Step by Step">
+<kw name="Login Page Automation Step By Step" library="home_page_aut_stepbystep">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url_automation}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211012 19:50:47.144" level="INFO">Opening browser 'chrome' to base url 'https://automationstepbystep.com/'.</msg>
+<status status="PASS" starttime="20211012 19:50:47.143" endtime="20211012 19:51:22.797"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211012 19:51:22.797" endtime="20211012 19:51:22.960"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${logo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211012 19:51:22.960" endtime="20211012 19:51:22.988"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${logo}</arg>
+<arg>Automation Step by Step</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211012 19:51:22.989" level="INFO">Verifying element 'xpath=//div/a[@id="logo"]' contains exact text 'Automation Step by Step'.</msg>
+<status status="PASS" starttime="20211012 19:51:22.988" endtime="20211012 19:51:23.008"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${span_selenium}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211012 19:51:23.008" endtime="20211012 19:51:23.033"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${span_selenium}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211012 19:51:23.034" level="INFO">Clicking element 'xpath=//li[@id="menu-item-89"]'.</msg>
+<status status="PASS" starttime="20211012 19:51:23.033" endtime="20211012 19:51:25.264"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211012 19:51:28.264" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211012 19:51:25.264" endtime="20211012 19:51:28.265"/>
+</kw>
+<status status="PASS" starttime="20211012 19:50:47.143" endtime="20211012 19:51:28.265"/>
+</kw>
+<status status="PASS" starttime="20211012 19:50:47.142" endtime="20211012 19:51:28.266"/>
+</test>
+<kw name="Close All Browsers" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211012 19:51:28.267" endtime="20211012 19:51:28.399"/>
+</kw>
+<status status="PASS" starttime="20211012 19:50:46.974" endtime="20211012 19:51:28.399"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Automationbystep">Automationbystep</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
